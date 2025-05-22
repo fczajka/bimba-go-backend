@@ -6,6 +6,11 @@ services:
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /
     autoDeploy: true
+    envVars: 
+      - key: PORT
+        value: 8000
+      - key: python
+        value: 3.13
     # Dodaj zmienne środowiskowe, jeśli będą potrzebne (np. API_KEY)
     # envVars:
     #   - key: MY_API_KEY
