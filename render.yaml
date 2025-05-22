@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: bimba-go-backend
+    runtime: python
+    buildCommand: uv pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /
+    autoDeploy: true
+    # Dodaj zmienne środowiskowe, jeśli będą potrzebne (np. API_KEY)
+    # envVars:
+    #   - key: MY_API_KEY
+    #     value: your_secret_key
