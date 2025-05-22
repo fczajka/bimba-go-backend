@@ -2,8 +2,8 @@ services:
   - type: web
     name: bimba-go-backend
     runtime: python
-    buildCommand: uv pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    buildCommand: poetry install
+    startCommand: poetry run uvicorn app:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /
     autoDeploy: true
     envVars: 
