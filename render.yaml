@@ -9,8 +9,6 @@ services:
     envVars: 
       - key: PORT
         value: 8000
-      - key: python
-        value: 3.13
     # Dodaj zmienne środowiskowe, jeśli będą potrzebne (np. API_KEY)
     # envVars:
     #   - key: MY_API_KEY
